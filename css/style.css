@@ -1,0 +1,315 @@
+/* Global properties */
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+.user-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0ea5e9;
+}
+
+/*********************************************************************************/
+
+.container {
+  height: 98vh;
+
+  display: grid;
+  grid-template-columns: .9fr 4fr;
+
+  grid-template-areas: 
+    'side head head head'
+    'side main main main'
+    'side main main main'
+    'side main main main';
+}
+
+/* start header */
+header {
+  background-color: #fff;
+  grid-area: head;
+
+  padding: 2em;
+
+  box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
+  position: sticky;
+  z-index: 1;
+  top: -2px;
+}
+
+header .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .search {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+header .top .search i {
+  font-size: 1.5rem;
+}
+
+header .top .search_bar {
+  background-color: #eee;
+  width: 500px;
+  height: 25px;
+
+  border-radius: 50px;
+}
+
+header .top .notif {
+  display: flex;
+  gap: 3em;
+  align-items: center;
+  justify-content: center;
+}
+
+header .notif i {
+  font-size: 2rem;
+}
+
+header .notif h2 {
+  font-size: 2rem;
+}
+
+header .bottom {
+  margin-top: 1.5em;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .bottom .user {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+header .bottom .user-info p {
+  font-size: 1.3rem;
+}
+
+header .bottom .user-info h2 {
+  font-size: 2rem;
+}
+
+header .bottom .user-profile {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0ea5e9;
+}
+
+header .bottom .btns {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+header .bottom .btns button {
+  border: none;
+  border-radius: 4em;
+
+  padding: .5em 1.3em;
+
+  background-color: #0ea5e9;
+  color: #fff;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+/* end header */
+
+/*********************************************************************************/
+
+/* start sidebar */
+aside {
+  background-color: #0ea5e9;
+  grid-area: side;
+
+  padding: 1.5em;
+
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+
+  margin-top: 1em;
+}
+
+.logo i {
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+
+  margin-top: 3.5em;
+}
+
+nav ul li {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+
+  margin-bottom: 1em;
+}
+
+nav ul li:nth-last-of-type(3) {
+  margin-top: 3em;
+}
+
+nav li i {
+  font-size: 1.3rem;
+
+  margin-right: 1em;
+}
+/* end sidebar */
+
+/*********************************************************************************/
+
+/* start main */
+main {
+  background-color: #f8fafc;
+  grid-area: main;
+  gap: 2em;
+
+  padding: 1.5em;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 250px;
+}
+
+main h2 {
+  font-size: 2em;
+
+  margin-bottom: .4em;
+}
+
+main .projects {
+  grid-row: 1 / 3;
+  grid-column: 1/3;
+}
+
+main .projects .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2em;
+}
+
+main .cards .card {
+  background-color: #fff;
+
+  height: 115px;
+  padding: 1.5em;
+
+  border-radius: .5em;
+  border-left: 5px solid goldenrod;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main .card-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: .5em;
+}
+
+main .card-text p {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+main .card-icons {
+  display: flex;
+  align-self: flex-end;
+  gap: 1.5em;
+}
+
+main .card-icons i {
+  font-size: 1.6em;
+  color: goldenrod;
+
+  cursor: pointer;
+}
+
+
+main .announce-content {
+  background-color: #fff;
+
+  padding: 2em;
+
+  border-radius: .4em;
+}
+
+main .announce-content hr {
+  margin: 1.2em 0;
+  color: #777;
+}
+
+main .announce-text h3 {
+  font-size: 1.3rem;
+}
+
+main .announce-text p {
+  font-size: 1.1rem;
+  color: #777;
+
+  max-width: 20em;
+}
+
+main .trending .trend {
+  background-color: #fff;
+
+  padding: 1.5em;
+
+  border-radius: .4em;
+}
+
+main .trending .trend-user {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  margin-bottom: .5em;
+}
+
+main .trend-user .user-text h3 {
+  font-size: 1.5rem;
+
+  margin-bottom: .3em;
+}
+
+main .trend-user .user-text h3 {
+  font-size: 1.2rem;
+}
+/* end main */
+
+
